@@ -168,6 +168,20 @@ export interface HeadingHeading extends Schema.Component {
   };
 }
 
+export interface HomeHeaderCardsHomeHeaderCards extends Schema.Component {
+  collectionName: 'components_home_header_cards_home_header_cards';
+  info: {
+    displayName: 'experience-more-for-less-card';
+    icon: 'filter';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    icon: Attribute.Media;
+  };
+}
+
 export interface ImageImage extends Schema.Component {
   collectionName: 'components_image_images';
   info: {
@@ -376,6 +390,7 @@ declare module '@strapi/types' {
       'divider.divider': DividerDivider;
       'group-images.group-images': GroupImagesGroupImages;
       'heading.heading': HeadingHeading;
+      'home-header-cards.home-header-cards': HomeHeaderCardsHomeHeaderCards;
       'image.image': ImageImage;
       'images.images': ImagesImages;
       'information-box.information-box': InformationBoxInformationBox;

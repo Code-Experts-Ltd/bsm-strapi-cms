@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "experience_more_for_less_cards",
+  "info": {
+    "singularName": "experience-more-for-less-card",
+    "pluralName": "experience-more-for-less-cards",
+    "displayName": "experience-more-for-less-card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-header-cards.home-header-cards"
+    }
+  }
+}
