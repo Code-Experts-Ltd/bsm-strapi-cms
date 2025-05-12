@@ -1272,6 +1272,39 @@ export interface ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading
   };
 }
 
+export interface ApiExperienceMoreForLessCardExperienceMoreForLessCard
+  extends Schema.SingleType {
+  collectionName: 'experience_more_for_less_cards';
+  info: {
+    singularName: 'experience-more-for-less-card';
+    pluralName: 'experience-more-for-less-cards';
+    displayName: 'experience-more-for-less-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    discount: Attribute.String;
+    cards: Attribute.Component<'home-header-cards.home-header-cards', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::experience-more-for-less-card.experience-more-for-less-card',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::experience-more-for-less-card.experience-more-for-less-card',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiExploreExplore extends Schema.SingleType {
   collectionName: 'explores';
   info: {
@@ -1908,6 +1941,7 @@ declare module '@strapi/types' {
       'api::crypto-currency-heading.crypto-currency-heading': ApiCryptoCurrencyHeadingCryptoCurrencyHeading;
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::every-thing-you-need-heading.every-thing-you-need-heading': ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading;
+      'api::experience-more-for-less-card.experience-more-for-less-card': ApiExperienceMoreForLessCardExperienceMoreForLessCard;
       'api::explore.explore': ApiExploreExplore;
       'api::explore-dubai.explore-dubai': ApiExploreDubaiExploreDubai;
       'api::explore-more-heading.explore-more-heading': ApiExploreMoreHeadingExploreMoreHeading;
