@@ -89,6 +89,18 @@ export interface CategoryCategory extends Schema.Component {
   };
 }
 
+export interface CryptoCurrenciesCryptoCurrencies extends Schema.Component {
+  collectionName: 'components_crypto_currencies_crypto_currencies';
+  info: {
+    displayName: 'CryptoCurrencies';
+    icon: 'apps';
+  };
+  attributes: {
+    link: Attribute.Text;
+    logo: Attribute.Media;
+  };
+}
+
 export interface DescriptionBlogDescription extends Schema.Component {
   collectionName: 'components_description_blog_descriptions';
   info: {
@@ -373,6 +385,19 @@ export interface SharedSeo extends Schema.Component {
   };
 }
 
+export interface SocialMediaCardsSocialMediaCards extends Schema.Component {
+  collectionName: 'components_social_media_cards_social_media_cards';
+  info: {
+    displayName: 'Social-Media-Cards';
+    icon: 'crop';
+  };
+  attributes: {
+    heading: Attribute.String;
+    sub_heading: Attribute.String;
+    backgroundImage: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -383,6 +408,7 @@ declare module '@strapi/types' {
       'blog-header-image.blog-header-image': BlogHeaderImageBlogHeaderImage;
       'blog-post.blog-post': BlogPostBlogPost;
       'category.category': CategoryCategory;
+      'crypto-currencies.crypto-currencies': CryptoCurrenciesCryptoCurrencies;
       'description.blog-description': DescriptionBlogDescription;
       'description.description': DescriptionDescription;
       'description.information': DescriptionInformation;
@@ -405,6 +431,7 @@ declare module '@strapi/types' {
       'region.region': RegionRegion;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
+      'social-media-cards.social-media-cards': SocialMediaCardsSocialMediaCards;
     }
   }
 }
