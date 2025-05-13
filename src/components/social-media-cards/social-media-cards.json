@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_social_media_cards_social_media_cards",
+  "info": {
+    "displayName": "Social-Media-Cards",
+    "icon": "crop"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "sub_heading": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

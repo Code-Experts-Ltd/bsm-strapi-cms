@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_crypto_currencies_crypto_currencies",
+  "info": {
+    "displayName": "CryptoCurrencies",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "text"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "follow_us_on_social_medias",
+  "info": {
+    "singularName": "follow-us-on-social-media",
+    "pluralName": "follow-us-on-social-medias",
+    "displayName": "FOLLOW US ON SOCIAL MEDIA",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "youtubeLink": {
+      "type": "text"
+    },
+    "instagramLink": {
+      "type": "text"
+    },
+    "tiktokLink": {
+      "type": "text"
+    },
+    "linkedinLink": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social-media-cards.social-media-cards"
+    }
+  }
+}

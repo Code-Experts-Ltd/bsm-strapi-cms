@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "cryptocurrency_friendly_travels",
+  "info": {
+    "singularName": "cryptocurrency-friendly-travel",
+    "pluralName": "cryptocurrency-friendly-travels",
+    "displayName": "Cryptocurrency friendly travel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "crypto": {
+      "type": "component",
+      "repeatable": true,
+      "component": "crypto-currencies.crypto-currencies"
+    }
+  }
+}

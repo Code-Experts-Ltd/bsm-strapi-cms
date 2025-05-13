@@ -1164,31 +1164,33 @@ export interface ApiCommingSoonHeadingCommingSoonHeading
   };
 }
 
-export interface ApiCryptoCurrencyHeadingCryptoCurrencyHeading
+export interface ApiCryptocurrencyFriendlyTravelCryptocurrencyFriendlyTravel
   extends Schema.SingleType {
-  collectionName: 'crypto_currency_headings';
+  collectionName: 'cryptocurrency_friendly_travels';
   info: {
-    singularName: 'crypto-currency-heading';
-    pluralName: 'crypto-currency-headings';
-    displayName: 'crypto_currency_heading';
+    singularName: 'cryptocurrency-friendly-travel';
+    pluralName: 'cryptocurrency-friendly-travels';
+    displayName: 'Cryptocurrency friendly travel';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    heading: Attribute.RichText;
-    description: Attribute.RichText;
+    heading: Attribute.String;
+    description: Attribute.Text;
+    crypto: Attribute.Component<'crypto-currencies.crypto-currencies', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::crypto-currency-heading.crypto-currency-heading',
+      'api::cryptocurrency-friendly-travel.cryptocurrency-friendly-travel',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::crypto-currency-heading.crypto-currency-heading',
+      'api::cryptocurrency-friendly-travel.cryptocurrency-friendly-travel',
       'oneToOne',
       'admin::user'
     > &
@@ -1480,6 +1482,44 @@ export interface ApiFollowUsFollowUs extends Schema.CollectionType {
   };
 }
 
+export interface ApiFollowUsOnSocialMediaFollowUsOnSocialMedia
+  extends Schema.SingleType {
+  collectionName: 'follow_us_on_social_medias';
+  info: {
+    singularName: 'follow-us-on-social-media';
+    pluralName: 'follow-us-on-social-medias';
+    displayName: 'FOLLOW US ON SOCIAL MEDIA';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Text;
+    youtubeLink: Attribute.Text;
+    instagramLink: Attribute.Text;
+    tiktokLink: Attribute.Text;
+    linkedinLink: Attribute.Text;
+    cards: Attribute.Component<'social-media-cards.social-media-cards', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::follow-us-on-social-media.follow-us-on-social-media',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::follow-us-on-social-media.follow-us-on-social-media',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterTextFooterText extends Schema.SingleType {
   collectionName: 'footer_texts';
   info: {
@@ -1672,40 +1712,6 @@ export interface ApiReviewsHeadingReviewsHeading extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::reviews-heading.reviews-heading',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiSocialMediaHeadingSocialMediaHeading
-  extends Schema.SingleType {
-  collectionName: 'social_media_headings';
-  info: {
-    singularName: 'social-media-heading';
-    pluralName: 'social-media-headings';
-    displayName: 'Social-Media-heading';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    heading: Attribute.RichText;
-    description: Attribute.RichText;
-    seo: Attribute.Component<'shared.seo'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::social-media-heading.social-media-heading',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::social-media-heading.social-media-heading',
       'oneToOne',
       'admin::user'
     > &
@@ -1938,7 +1944,7 @@ declare module '@strapi/types' {
       'api::city-guides-heading.city-guides-heading': ApiCityGuidesHeadingCityGuidesHeading;
       'api::comming-soon.comming-soon': ApiCommingSoonCommingSoon;
       'api::comming-soon-heading.comming-soon-heading': ApiCommingSoonHeadingCommingSoonHeading;
-      'api::crypto-currency-heading.crypto-currency-heading': ApiCryptoCurrencyHeadingCryptoCurrencyHeading;
+      'api::cryptocurrency-friendly-travel.cryptocurrency-friendly-travel': ApiCryptocurrencyFriendlyTravelCryptocurrencyFriendlyTravel;
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::every-thing-you-need-heading.every-thing-you-need-heading': ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading;
       'api::experience-more-for-less-card.experience-more-for-less-card': ApiExperienceMoreForLessCardExperienceMoreForLessCard;
@@ -1947,13 +1953,13 @@ declare module '@strapi/types' {
       'api::explore-more-heading.explore-more-heading': ApiExploreMoreHeadingExploreMoreHeading;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
+      'api::follow-us-on-social-media.follow-us-on-social-media': ApiFollowUsOnSocialMediaFollowUsOnSocialMedia;
       'api::footer-text.footer-text': ApiFooterTextFooterText;
       'api::header-section-text.header-section-text': ApiHeaderSectionTextHeaderSectionText;
       'api::hot-picks-heading.hot-picks-heading': ApiHotPicksHeadingHotPicksHeading;
       'api::print.print': ApiPrintPrint;
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;
       'api::reviews-heading.reviews-heading': ApiReviewsHeadingReviewsHeading;
-      'api::social-media-heading.social-media-heading': ApiSocialMediaHeadingSocialMediaHeading;
       'api::subscribe-checkbox-text.subscribe-checkbox-text': ApiSubscribeCheckboxTextSubscribeCheckboxText;
       'api::trending-destination-heading.trending-destination-heading': ApiTrendingDestinationHeadingTrendingDestinationHeading;
       'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;
