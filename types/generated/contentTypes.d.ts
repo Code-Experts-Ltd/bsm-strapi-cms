@@ -1719,6 +1719,36 @@ export interface ApiReviewsHeadingReviewsHeading extends Schema.SingleType {
   };
 }
 
+export interface ApiSignupBannerTextSignupBannerText extends Schema.SingleType {
+  collectionName: 'signup_banner_texts';
+  info: {
+    singularName: 'signup-banner-text';
+    pluralName: 'signup-banner-texts';
+    displayName: 'signup-banner-text';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    signup_banner_text: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::signup-banner-text.signup-banner-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::signup-banner-text.signup-banner-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSubscribeCheckboxTextSubscribeCheckboxText
   extends Schema.SingleType {
   collectionName: 'subscribe_checkbox_texts';
@@ -1960,6 +1990,7 @@ declare module '@strapi/types' {
       'api::print.print': ApiPrintPrint;
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;
       'api::reviews-heading.reviews-heading': ApiReviewsHeadingReviewsHeading;
+      'api::signup-banner-text.signup-banner-text': ApiSignupBannerTextSignupBannerText;
       'api::subscribe-checkbox-text.subscribe-checkbox-text': ApiSubscribeCheckboxTextSubscribeCheckboxText;
       'api::trending-destination-heading.trending-destination-heading': ApiTrendingDestinationHeadingTrendingDestinationHeading;
       'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;

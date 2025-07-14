@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "signup_banner_texts",
+  "info": {
+    "singularName": "signup-banner-text",
+    "pluralName": "signup-banner-texts",
+    "displayName": "signup-banner-text"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "signup_banner_text": {
+      "type": "string"
+    }
+  }
+}
