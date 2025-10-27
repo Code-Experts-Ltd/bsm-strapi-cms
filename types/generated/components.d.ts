@@ -169,6 +169,15 @@ export interface GroupImagesGroupImages extends Schema.Component {
   };
 }
 
+export interface HeadingH5HeadingH5 extends Schema.Component {
+  collectionName: 'components_heading_h5_heading_h5s';
+  info: {
+    displayName: 'Heading-H5';
+    description: '';
+  };
+  attributes: {};
+}
+
 export interface HeadingHeading extends Schema.Component {
   collectionName: 'components_heading_headings';
   info: {
@@ -334,6 +343,29 @@ export interface RegionRegion extends Schema.Component {
   };
 }
 
+export interface RichTextEditorRichTextEditor extends Schema.Component {
+  collectionName: 'components_rich_text_editor_rich_text_editors';
+  info: {
+    displayName: 'rich-text-editor';
+  };
+  attributes: {
+    rich_text_editor: Attribute.Blocks;
+  };
+}
+
+export interface SharedButton extends Schema.Component {
+  collectionName: 'components_shared_buttons';
+  info: {
+    displayName: 'Button';
+  };
+  attributes: {
+    label: Attribute.String;
+    url: Attribute.Text;
+    variant: Attribute.Enumeration<['outlined', 'filled']>;
+    open_in_new_tab: Attribute.Boolean;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -415,6 +447,7 @@ declare module '@strapi/types' {
       'destination.destination': DestinationDestination;
       'divider.divider': DividerDivider;
       'group-images.group-images': GroupImagesGroupImages;
+      'heading-h5.heading-h5': HeadingH5HeadingH5;
       'heading.heading': HeadingHeading;
       'home-header-cards.home-header-cards': HomeHeaderCardsHomeHeaderCards;
       'image.image': ImageImage;
@@ -429,6 +462,8 @@ declare module '@strapi/types' {
       'published-date.published-date': PublishedDatePublishedDate;
       'quick-overview.quick-overview': QuickOverviewQuickOverview;
       'region.region': RegionRegion;
+      'rich-text-editor.rich-text-editor': RichTextEditorRichTextEditor;
+      'shared.button': SharedButton;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
       'social-media-cards.social-media-cards': SocialMediaCardsSocialMediaCards;
