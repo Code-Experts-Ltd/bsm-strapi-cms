@@ -343,13 +343,13 @@ export interface RegionRegion extends Schema.Component {
   };
 }
 
-export interface RichTextEditorRichTextEditor extends Schema.Component {
-  collectionName: 'components_rich_text_editor_rich_text_editors';
+export interface RichTextRichText extends Schema.Component {
+  collectionName: 'components_rich_text_rich_texts';
   info: {
-    displayName: 'rich-text-editor';
+    displayName: 'rich-text';
   };
   attributes: {
-    rich_text_editor: Attribute.Blocks;
+    rich_text: Attribute.Blocks;
   };
 }
 
@@ -462,7 +462,7 @@ declare module '@strapi/types' {
       'published-date.published-date': PublishedDatePublishedDate;
       'quick-overview.quick-overview': QuickOverviewQuickOverview;
       'region.region': RegionRegion;
-      'rich-text-editor.rich-text-editor': RichTextEditorRichTextEditor;
+      'rich-text.rich-text': RichTextRichText;
       'shared.button': SharedButton;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;

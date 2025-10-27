@@ -28,8 +28,8 @@
         "multi-images.multi-images",
         "blog-header-image.blog-header-image",
         "destination.destination",
-        "rich-text-editor.rich-text-editor",
-        "shared.button"
+        "shared.button",
+        "rich-text.rich-text"
       ]
     },
     "category": {
