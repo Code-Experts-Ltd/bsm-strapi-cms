@@ -4,7 +4,8 @@
   "info": {
     "singularName": "experience-more-for-less-card",
     "pluralName": "experience-more-for-less-cards",
-    "displayName": "experience-more-for-less-card"
+    "displayName": "experience-more-for-less-card",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,13 +15,16 @@
     "heading": {
       "type": "string"
     },
-    "discount": {
+    "signupText": {
       "type": "string"
     },
     "cards": {
       "type": "component",
       "repeatable": true,
       "component": "home-header-cards.home-header-cards"
+    },
+    "loginText": {
+      "type": "string"
     }
   }
 }

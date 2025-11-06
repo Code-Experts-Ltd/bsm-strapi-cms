@@ -1283,14 +1283,16 @@ export interface ApiExperienceMoreForLessCardExperienceMoreForLessCard
     singularName: 'experience-more-for-less-card';
     pluralName: 'experience-more-for-less-cards';
     displayName: 'experience-more-for-less-card';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     heading: Attribute.String;
-    discount: Attribute.String;
+    signupText: Attribute.String;
     cards: Attribute.Component<'home-header-cards.home-header-cards', true>;
+    loginText: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1727,12 +1729,14 @@ export interface ApiSignupBannerTextSignupBannerText extends Schema.SingleType {
     singularName: 'signup-banner-text';
     pluralName: 'signup-banner-texts';
     displayName: 'signup-banner-text';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    signup_banner_text: Attribute.String;
+    hotels_listing_page: Attribute.JSON;
+    hotel_details_page: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

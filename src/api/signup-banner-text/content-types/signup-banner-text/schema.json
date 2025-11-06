@@ -4,15 +4,19 @@
   "info": {
     "singularName": "signup-banner-text",
     "pluralName": "signup-banner-texts",
-    "displayName": "signup-banner-text"
+    "displayName": "signup-banner-text",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "signup_banner_text": {
-      "type": "string"
+    "hotels_listing_page": {
+      "type": "json"
+    },
+    "hotel_details_page": {
+      "type": "json"
     }
   }
 }
