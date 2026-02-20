@@ -1276,41 +1276,6 @@ export interface ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading
   };
 }
 
-export interface ApiExperienceMoreForLessCardExperienceMoreForLessCard
-  extends Schema.SingleType {
-  collectionName: 'experience_more_for_less_cards';
-  info: {
-    singularName: 'experience-more-for-less-card';
-    pluralName: 'experience-more-for-less-cards';
-    displayName: 'experience-more-for-less-card';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    heading: Attribute.String;
-    signupText: Attribute.String;
-    cards: Attribute.Component<'home-header-cards.home-header-cards', true>;
-    loginText: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::experience-more-for-less-card.experience-more-for-less-card',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::experience-more-for-less-card.experience-more-for-less-card',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiExploreExplore extends Schema.SingleType {
   collectionName: 'explores';
   info: {
@@ -1555,34 +1520,36 @@ export interface ApiFooterTextFooterText extends Schema.SingleType {
   };
 }
 
-export interface ApiHeaderSectionTextHeaderSectionText
-  extends Schema.SingleType {
-  collectionName: 'header_section_texts';
+export interface ApiHeaderSectionHeaderSection extends Schema.SingleType {
+  collectionName: 'header_section';
   info: {
-    singularName: 'header-section-text';
-    pluralName: 'header-section-texts';
-    displayName: 'header-section-text';
+    singularName: 'header-section';
+    pluralName: 'headers-section';
+    displayName: 'header-section';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    heading: Attribute.RichText;
-    description: Attribute.RichText;
-    paymentDescription: Attribute.RichText;
-    ff: Attribute.RichText;
+    heading: Attribute.String;
+    signupText: Attribute.String;
+    cards: Attribute.Component<'home-header-cards.home-header-cards', true>;
+    loginText: Attribute.String;
+    description: Attribute.Text;
+    hotelOfTheMonth: Attribute.String;
+    bgImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::header-section-text.header-section-text',
+      'api::header-section.header-section',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::header-section-text.header-section-text',
+      'api::header-section.header-section',
       'oneToOne',
       'admin::user'
     > &
@@ -1983,7 +1950,6 @@ declare module '@strapi/types' {
       'api::cryptocurrency-friendly-travel.cryptocurrency-friendly-travel': ApiCryptocurrencyFriendlyTravelCryptocurrencyFriendlyTravel;
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::every-thing-you-need-heading.every-thing-you-need-heading': ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading;
-      'api::experience-more-for-less-card.experience-more-for-less-card': ApiExperienceMoreForLessCardExperienceMoreForLessCard;
       'api::explore.explore': ApiExploreExplore;
       'api::explore-dubai.explore-dubai': ApiExploreDubaiExploreDubai;
       'api::explore-more-heading.explore-more-heading': ApiExploreMoreHeadingExploreMoreHeading;
@@ -1991,7 +1957,7 @@ declare module '@strapi/types' {
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
       'api::follow-us-on-social-media.follow-us-on-social-media': ApiFollowUsOnSocialMediaFollowUsOnSocialMedia;
       'api::footer-text.footer-text': ApiFooterTextFooterText;
-      'api::header-section-text.header-section-text': ApiHeaderSectionTextHeaderSectionText;
+      'api::header-section.header-section': ApiHeaderSectionHeaderSection;
       'api::hot-picks-heading.hot-picks-heading': ApiHotPicksHeadingHotPicksHeading;
       'api::print.print': ApiPrintPrint;
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;

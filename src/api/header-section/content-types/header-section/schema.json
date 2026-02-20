@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "experience_more_for_less_cards",
+  "collectionName": "header_section",
   "info": {
-    "singularName": "experience-more-for-less-card",
-    "pluralName": "experience-more-for-less-cards",
-    "displayName": "experience-more-for-less-card",
+    "singularName": "header-section",
+    "pluralName": "headers-section",
+    "displayName": "header-section",
     "description": ""
   },
   "options": {
@@ -25,6 +25,17 @@
     },
     "loginText": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hotelOfTheMonth": {
+      "type": "string"
+    },
+    "bgImage": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false
     }
   }
 }
