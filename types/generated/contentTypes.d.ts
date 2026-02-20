@@ -1536,9 +1536,9 @@ export interface ApiHeaderSectionHeaderSection extends Schema.SingleType {
     signupText: Attribute.String;
     cards: Attribute.Component<'home-header-cards.home-header-cards', true>;
     loginText: Attribute.String;
-    description: Attribute.Text;
     hotelOfTheMonth: Attribute.String;
     bgImage: Attribute.Media;
+    description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
