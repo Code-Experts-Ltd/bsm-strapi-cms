@@ -1539,6 +1539,7 @@ export interface ApiHeaderSectionHeaderSection extends Schema.SingleType {
     hotelOfTheMonth: Attribute.String;
     bgImage: Attribute.Media;
     description: Attribute.Blocks;
+    bgImageMobile: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
