@@ -1428,11 +1428,10 @@ export interface ApiFollowUsFollowUs extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    youtube: Attribute.Text;
-    instagram: Attribute.Text;
-    music: Attribute.Text;
     images: Attribute.Media;
     seo: Attribute.Component<'shared.seo'>;
+    heading: Attribute.String;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
