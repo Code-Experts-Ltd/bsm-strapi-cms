@@ -1537,8 +1537,8 @@ export interface ApiHeaderSectionHeaderSection extends Schema.SingleType {
     loginText: Attribute.String;
     hotelOfTheMonth: Attribute.String;
     bgImage: Attribute.Media;
-    description: Attribute.Blocks;
     bgImageMobile: Attribute.Media;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

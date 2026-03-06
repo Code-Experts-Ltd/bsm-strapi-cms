@@ -37,18 +37,19 @@
         "images"
       ]
     },
-    "description": {
-      "type": "blocks"
-    },
     "bgImageMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
